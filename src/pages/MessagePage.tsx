@@ -6,7 +6,7 @@ const MessagePage = () => {
     const [message, setMessage] = useState<any>(null);
     
     const randomInt = Math.floor(Math.random() * 1454) + 1;
-    const url = 'https://dummyjson.com/quotes/'+randomInt;
+    const url = `https://dummyjson.com/quotes/${randomInt}`;
 
     useEffect(() => {
         const fetchMessage = async () => {

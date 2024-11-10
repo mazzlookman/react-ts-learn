@@ -5,6 +5,13 @@ interface TextInputProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const TextInput: React.FC<TextInputProps> = ({value, onChange}) => {
-    return <input type="text" value={value} onChange={onChange} />;
-}
+export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(({value, onChange}, ref) => {
+    return (
+        <input 
+            ref={ref}
+            type="text" 
+            value={value} 
+            onChange={onChange} 
+        />
+    )
+});
