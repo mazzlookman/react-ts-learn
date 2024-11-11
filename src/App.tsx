@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage'
 import MessagePage from './pages/MessagePage'
 import React from 'react'
 import { ProductPage } from './pages/ProductPage'
+import { ProductDetailPage } from './pages/ProductDetailPage'
 
 const App: React.FC  = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC  = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/message' element={<MessagePage />} />
         <Route path='/products' element={<ProductPage />} />
+        <Route path='/products/:id' element={<ProductDetailPage />} />
       </Routes>
     </Router>
   );

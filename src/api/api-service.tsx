@@ -8,6 +8,18 @@ const api = axios.create({
     }
 });
 
+// Get single product
+export const fetchProductById = async (id: number) => {
+    try {
+        // const randomId = (Math.floor(Math.random() * 1454) + 1).toString;
+        const response = await api.get(`/products/${id}`);
+        return response.data;
+    } catch(e) {
+        console.error('Error get single user: ', e);
+        throw e;
+    }
+}
+
 // Get products
 export const fetchProducts = async () => {
     try {
