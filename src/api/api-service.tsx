@@ -8,7 +8,7 @@ const api = axios.create({
     }
 });
 
-
+// Get products
 export const fetchProducts = async () => {
     try {
         // const randomId = (Math.floor(Math.random() * 1454) + 1).toString;
@@ -17,5 +17,23 @@ export const fetchProducts = async () => {
     } catch(e) {
         console.error('Error get single user: ', e);
         throw e;
+    }
+}
+
+
+// Post products
+export interface CreateProduct {
+    title: string;
+    price: number;
+    image: string;
+}
+
+export const createProduct = async (product: CreateProduct) => {
+    try {
+        const response = await api.post('/products', product);
+        return response.data;
+    } catch(err) {
+        console.log('Error creating product:', err);
+        throw err;
     }
 }

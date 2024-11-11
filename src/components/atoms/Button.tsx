@@ -6,5 +6,5 @@ interface ButtonProps {
 }
 
 export const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
-    return <button onClick={onClick}>{label}</button>
+    return <button className="bg-yellow-500 text-slate-100 my-3" onClick={onClick}>{label}</button>
 };

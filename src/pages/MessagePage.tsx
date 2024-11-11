@@ -26,15 +26,14 @@ const MessagePage = () => {
     return (
         <div>
             <h1>Message Page</h1>
-            <p>Type some message ..</p>
+            <p className="mt-5 mb-2">Type some message ..</p>
             <TextHandler />
-            <nav>
+            <nav className="mt-5">
                 <Link to={'/'}>Go to Home Page</Link>
             </nav>
             {message ? (
-                <div>
-                    <h2>Quotes Today:</h2>
-                    <pre>Quotes {JSON.stringify(message.id, null, 2)}:</pre>
+                <div className="mt-5">
+                    <h2>Quotes Today:</h2>                
                     <pre>{JSON.stringify(message.quote, null, 2)}</pre>
                 </div>
             ) : (
