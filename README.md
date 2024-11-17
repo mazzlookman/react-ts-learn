@@ -1,50 +1,88 @@
-# React + TypeScript + Vite
+# React TS Learn
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repository ini berisi dokumentasi perjalanan saya dalam mempelajari **React dengan TypeScript**. Proyek ini berfungsi sebagai latihan untuk memahami berbagai konsep inti dalam pengembangan aplikasi menggunakan React dan TypeScript.
 
-Currently, two official plugins are available:
+## 🎯 Tujuan Pembelajaran
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Memahami dasar-dasar **React dengan TypeScript**.
+- Menerapkan konsep-konsep React untuk membangun antarmuka pengguna yang dinamis dan interaktif.
+- Membiasakan diri dengan fitur TypeScript dalam React, seperti tipe data, props, dan state management.
 
-## Expanding the ESLint configuration
+## 📚 Materi yang Telah Dipelajari
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Berikut adalah topik yang telah saya pelajari dan praktikkan dalam repository ini:
 
-- Configure the top-level `parserOptions` property like this:
+1. **Conditional Rendering**
+   - Membuat komponen yang dapat menampilkan elemen berdasarkan kondisi tertentu.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. **Event Handling**
+   - Menangani berbagai event (klik, input, submit) menggunakan fungsi handler.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. **State dan useState**
+   - Mengelola state lokal dalam komponen menggunakan hook `useState`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+4. **React Router**
+   - Membuat navigasi antar halaman menggunakan `react-router-dom`.
+   - Dinamisasi routing dengan parameter URL.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+5. **Lifecycle dan useEffect Hook**
+   - Memahami lifecycle komponen di React.
+   - Menggunakan `useEffect` untuk efek samping seperti fetching data atau mengatur event listener.
+
+6. **useRef Hook**
+   - Memanfaatkan `useRef` untuk akses langsung ke elemen DOM dan menyimpan nilai yang tidak memicu render ulang.
+
+7. **API Integration (GET & POST) dengan Axios**
+   - Berlatih melakukan permintaan data (GET) dari API eksternal.
+   - Mengirim data ke API menggunakan metode POST.
+
+8. **Dynamic Routing**
+   - Implementasi routing dinamis berdasarkan parameter, seperti detail halaman berdasarkan ID atau slug.
+
+## 🚀 Cara Menjalankan Proyek
+
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/mazzlookman/react-ts-learn.git
+   ```
+
+2. Masuk ke folder proyek:
+   ```bash
+   cd react-ts-learn
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Jalankan aplikasi:
+   ```bash
+   npm start
+   ```
+
+Aplikasi akan berjalan di [http://localhost:3000](http://localhost:3000).
+
+## 🔍 Catatan
+
+- Proyek ini adalah bagian dari latihan, sehingga beberapa implementasi mungkin memerlukan pengoptimalan lebih lanjut.
+- Silakan kunjungi folder `src/` untuk melihat detail implementasi setiap konsep yang telah dipelajari.
+
+## 📌 Roadmap
+
+Berikut adalah rencana pengembangan lebih lanjut dalam pembelajaran ini:
+- Mempelajari state management dengan **Redux** atau **React Context**.
+- Implementasi lebih banyak **Hooks** lagi
+- Implementasi **Atomic Design Pattern**
+
+## 🛠️ Teknologi yang Digunakan
+
+- React
+- TypeScript
+- React Router
+- Axios
+- CSS untuk styling
+
+---
+
+Thanks. ✨
